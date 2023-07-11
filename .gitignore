@@ -1,2 +1,14 @@
-backend/node_modules
-frontend/node_modules
+
+*/node_modules
+*/.DS_store
+*/.idea
+*/.vscode
+*/.env
+*/.env.local
+*/.env.development.local
+*/.env.test.local
+*/.env.production.local
+*/.cache
+*/.parcel-cache
+*/.next
+*/.nuxt
