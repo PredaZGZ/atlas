@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: true,
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: './',
   },
   plugins: ['react-refresh'],
   rules: {
@@ -24,4 +24,10 @@ module.exports = {
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
   },
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "excludedFiles": "*.eslintrc.cjs"
+    }
+  ]
 }
