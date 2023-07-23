@@ -41,7 +41,29 @@ const addFileToFolder = async (req, res) => {
   }
 };
 
+const getFoldersByUser = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const userFolders = await Folder.find({ user: userId });
+
+    const folders = userFolders.map(folder => {
+      return {
+        id: folder._id,
+        name: folder.name,
+        files: folder.files.length
+      }
+    });
+
+    res.status(200).json(folders);
+    
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+};
+
 module.exports = {
   createFolder,
-  addFileToFolder
+  addFileToFolder,
+  getFoldersByUser,
 };

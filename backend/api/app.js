@@ -10,11 +10,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 //Carga de rutas
-// const verifyToken = require('./routes/auth/verifyToken');
+const verifyToken = require('./routes/auth/validateToken');
 const Auth = require('./routes/auth/auth'); 
+const Vault = require('./routes/vault');
 
 //Routes Middlewares
  app.use('/auth', Auth);
-// app.use('/fitness/weights', verifyToken, Weights);
+ app.use('/vault', verifyToken, Vault);
 
 module.exports = app

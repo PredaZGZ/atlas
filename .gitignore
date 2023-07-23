@@ -12,3 +12,6 @@
 */.parcel-cache
 */.next
 */.nuxt
+
+.DS_Store
+*/.DS_Store
