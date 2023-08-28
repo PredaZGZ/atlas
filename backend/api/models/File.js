@@ -8,7 +8,6 @@ const fileSchema = new mongoose.Schema({
   filename: {
     type: String,
     required: true,
-    unique: true
   },
   path: {
     type: String,
